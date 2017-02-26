@@ -1,0 +1,74 @@
+/* height × width / margin / padding / display / border / background / text-align / font / color*/
+
+body {
+  min-width: 389px;
+  background: #f1f1f1;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Lobster Two', cursive;
+  color: #337ab7;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+.outerDial {
+  width: 15em;
+  margin: auto;
+}
+
+.innerDial {
+  position: relative;
+  z-index: -1;
+  top: -12.8em;
+  margin-bottom: -10em;
+}
+
+.allBtns {
+  position: fixed;
+  z-index: 1;
+  top: 1.5%;
+  left: 2.5%;
+}
+
+.settingsBtnGroup {
+  position: relative;
+  width: 85%;
+  left: 13%;
+  margin-top: 1px;
+}
+
+.settingsBtnGroup {
+  display: none;
+}
+
+.settingHeading {
+  background: #57585b;
+  color: white;
+}
+
+.btn-default {
+  color: #57585b;
+}
+
+.pauseFa {
+  display: none;
+}
+
+.fa {
+  font-size: 3em;
+}
+
+.fa-cog {
+  font-size: 2.5em;
+}
+
+.fa-bell-o {
+  font-size: 2em;
+}
+
+.fa-bell-slash-o {
+  height: 1.2em;
+  font-size: 1.75em;
+}

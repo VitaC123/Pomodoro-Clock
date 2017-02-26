@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/3c36a15e35.js"></script>
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+  <div class="allBtns">
+    <!-- "allBtns" is position: fixed, so intentionally placed outside of "container" -->
+    <div class="primaryBtnGroup btn-group btn-group-vertical">
+      <button class="playBtn playResetSettings btn btn-default"><span class="fa fa-play-circle-o playFa" aria-hidden="true"></span><span class="fa fa-pause-circle-o pauseFa" aria-hidden="true"></span></button>
+      <button class="resetBtn playResetSettings btn btn-default disabled"><span class="fa fa-stop-circle-o restartFa" aria-hidden="true"></span></button>
+      <button class="settingsBtn playResetSettings btn btn-default"><span class="fa fa-cog settingsFa" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="settingsBtnGroup btn-group btn-group-vertical">
+      <div class="settingHeading">Speed</div>
+      <button class="fastForwardBtn speed1x btn btn-info">1x</button>
+      <button class="fastForwardBtn speed10x btn btn-default">10x</button>
+      <button class="fastForwardBtn speed20x btn btn-default">20x</button>
+      <div class="settingHeading">Sound</div>
+      <button class="muteBtn btn btn-warning"><span class="fa fa-bell-o soundFa" aria-hidden="true"></span></button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="workSection">
+          <h1>Work</h1>
+          <div class="outerDial">
+            <input type="text" class="dial workDial" data-min="0" data-max="60" value="25" data-width="100%" data-fgColor="#96cbe4" data-bgColor="#d9d9d9"
+              data-inputColor="#96cbe4" data-font="Lobster Two">
+              <div class="innerDial">
+                <input type="text" class="dial dialSeconds" data-min="0" data-max="60" value="0" readOnly="true" data-displayInput="false"
+                  data-width="66%" data-thickness="0.2" data-fgColor="grey" data-bgColor="#d9d9d9" data-cursor=8>
+              </div>
+          </div>
+        </div>
+
+        <div class="breakSection">
+          <h1>Break</h1>
+          <div class="outerDial">
+            <input type="text" class="dial breakDial" data-min="0" data-max="60" value="0" data-width="100%" data-fgColor="#96cbe4" data-bgColor="#d9d9d9"
+              data-inputColor="#96cbe4" data-font="Lobster Two">
+              <div class="innerDial">
+                <input type="text" class="dial dialSeconds" data-min="0" data-max="59" value="0" readOnly="true" data-displayInput="false"
+                  data-width="66%" data-thickness="0.2" data-fgColor="grey" data-bgColor="#d9d9d9" data-cursor=8>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+
+  <audio class="bellSound">
+    <source src="https://www.soundjay.com/mechanical/sounds/clong-1.mp3" type="audio/mpeg">
+  </audio>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js'></script>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
